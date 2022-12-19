@@ -26,38 +26,3 @@ a {
   color: #5A45FF;
   text-decoration: none;
 }
-
-main {
-  max-width: 620px;
-  margin: auto;
-  height: 100vh;
-  padding: 0 30px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-main ul {
-  list-style: none;
-}
-
-main li {
-  margin-bottom: 5px;
-  position: relative;
-  padding-left: 25px;
-}
-
-main li:before {
-  content: '—';
-  position: absolute;
-  left: 0;
-}
-
-main code {
-  font-size: 16px;
-  background: #e6e2ff;
-}

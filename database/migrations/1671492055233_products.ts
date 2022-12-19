@@ -6,8 +6,8 @@ export default class extends BaseSchema {
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.integer('stock')
-      table.boolean('free_deliver')
+      table.integer('stock').notNullable()
+      table.boolean('free_deliver').nullable()
       table.double('price').notNullable()
       table.string('shop_name').nullable()
       table.string('title', 255).notNullable()
