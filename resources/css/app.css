@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 html, body {
-  color: #F7F8FA;
+  color: #46444c;
   position: relative;
-  background-color: #46444c;
+  background-color: #F7F8FA;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -25,4 +25,12 @@ body:before {
 a {
   color: #5A45FF;
   text-decoration: none;
+}
+
+table, td, tr {
+  border: #46444c solid 2px;
+}
+
+td {
+  padding: 12px;
 }

@@ -1,0 +1,31 @@
+@layout('layouts/main')
+@set('title', 'Produit unique')
+
+@section('body')
+  <div class="p-4">
+    <h4>{{ product.title }}</h4>
+
+    <table>
+      <thead>
+        <td>Boutique</td>
+        <td>Prix</td>
+        <td>Livraison Gratuite</td>
+        <td>Stock</td>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>{{ product.shopName }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.freeDeliver ? "Oui" : "Non" }}</td>
+          <td>{{ product.stock }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="mb-3 mt-3">
+      <a href=""# class="btn btn-primary">Modifier</a>
+      <a onclick="return confirm('Sûr de bien vouloir supprimer ?')" href="{{ route('destroy', {id: product.id}) }}" class="btn btn-danger ms-3">Supprimer</a>
+    </div>
+  </div>
+@end

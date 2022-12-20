@@ -2,5 +2,11 @@
 @set('title', 'Accueil - Gérer la boutique')
 
 @section('body')
-
+  <h5 class="m-3">Products list</h5>
+  <a href="{{ route('create') }}" class="btn btn-primary mb-3 ms-3">Create new product</a>
+  <ul>
+  @each(product in products)
+    <a href="/show/{{ product.id }}"><li>{{ product.title }}</li></a>
+  @end
+  </ul>
 @end

@@ -1,0 +1,16 @@
+@layout('layouts/main')
+@set('title', 'Ajouter un nouveau produit')
+
+@section('body')
+  <h5 class="m-3">Ajouter un nouveau produit</h5>
+
+  <form action="{{ route('create.save') }}" method="post" class="d-flex pb-3 ps-3 gap-3">
+    <input type="text" id="title" name="title" placeholder="Title">
+    <input type="number" id="price" name="price" placeholder="Price">
+    <input type="number" id="stock" name="stock" placeholder="Stock">
+    <label for="freeDeliver">Free Deliver</label>
+    <input type="checkbox" name="freeDeliver" id="freeDeliver">
+    <input type="text" id="shopName" name="shopName" placeholder="Shop Name">
+    <button class="btn btn-success" type="submit">Enregistrer</button>
+  </form>
+@end

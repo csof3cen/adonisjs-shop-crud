@@ -12,13 +12,13 @@ export default class Product extends BaseModel {
   public stock: number
 
   @column()
-  public free_deliver: boolean
+  public freeDeliver: boolean | null
 
   @column()
   public price: number
 
   @column()
-  public shop_name: string
+  public shopName: string | null
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
