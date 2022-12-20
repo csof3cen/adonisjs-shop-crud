@@ -1,0 +1,16 @@
+@layout('layouts/main')
+@set('title', 'Modifier le produit')
+
+@section('body')
+  <h5 class="m-3">Modifier le produit</h5>
+
+  <form action="{{ route('update.save', {id: product.id}) }}" method="post" class="d-flex pb-3 ps-3 gap-3">
+    <input type="text" id="title" name="title" placeholder="Title" value="{{ product.title }}" required>
+    <input type="number" id="price" name="price" placeholder="Price" value="{{ product.price }}" required>
+    <input type="number" id="stock" name="stock" placeholder="Stock" value="{{ product.stock }}">
+    <label for="freeDeliver">Free Deliver</label>
+    <input type="checkbox" name="freeDeliver" id="freeDeliver" {{ product.freeDeliver ? "checked" : '' }}>
+    <input type="text" id="shopName" name="shopName" placeholder="Shop Name" value="{{ product.shopName }}">
+    <button class="btn btn-success" type="submit">Enregistrer</button>
+  </form>
+@end

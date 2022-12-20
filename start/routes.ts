@@ -25,3 +25,6 @@ Route.get('/show/:id', 'ProductsController.show').as('show')
 Route.get('/delete/:id', 'ProductsController.destroy').as('destroy')
 Route.get('/create', 'ProductsController.create').as('create')
 Route.post('/create', 'ProductsController.save').as('create.save')
+
+Route.get('/update/:id', 'ProductsController.update').as('update.get')
+Route.post('/update/:id', 'ProductsController.saveUpdate').as('update.save')

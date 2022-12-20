@@ -24,7 +24,7 @@
     </table>
 
     <div class="mb-3 mt-3">
-      <a href=""# class="btn btn-primary">Modifier</a>
+      <a href="{{ route('update.get', {id: product.id}) }}" class="btn btn-primary">Modifier</a>
       <a onclick="return confirm('Sûr de bien vouloir supprimer ?')" href="{{ route('destroy', {id: product.id}) }}" class="btn btn-danger ms-3">Supprimer</a>
     </div>
   </div>
