@@ -5,7 +5,7 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 export default class ProductsController {
 
   async index({view} : HttpContextContract){
-    const products = await Product.all();
+    const products = await Product.query().orderBy('price', 'desc');
 
     return await view.render('home', {products: products });
   }
