@@ -11,6 +11,9 @@
     <label for="freeDeliver">Free Deliver</label>
     <input type="checkbox" name="freeDeliver" id="freeDeliver" {{ product.freeDeliver ? "checked" : '' }}>
     <input type="text" id="shopName" name="shopName" placeholder="Shop Name" value="{{ product.shopName }}">
-    <button class="btn btn-success" type="submit">Enregistrer</button>
+    <div class="d-block">
+      <button class="btn btn-success" type="submit">Enregistrer</button>
+      <a href="{{ route('home') }}" class="btn btn-secondary" type="submit">Cancel</a>
+    </div>
   </form>
 @end
