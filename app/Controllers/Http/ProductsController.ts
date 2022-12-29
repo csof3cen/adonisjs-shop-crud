@@ -18,7 +18,7 @@ export default class ProductsController {
 
   async destroy({params, response}: HttpContextContract){
     const product = await Product.findOrFail(params.id)
-    product.delete()
+    await product.delete()
     return response.redirect().toRoute('home')
   }
 
@@ -29,12 +29,12 @@ export default class ProductsController {
   async save({request, response}: HttpContextContract){
     const product = new Product();
 
-    // Data needs verification defore save
+    // Data needs verification before save
 
     product.title = request.body()['title'];
     product.price = request.body()['price'];
     product.stock = request.body()['stock'];
-    product.freeDeliver = request.body()['freeDeliver'] === 'on' ? true : false;
+    product.freeDeliver = request.body()['freeDeliver'] === 'on';
     product.shopName = request.body()['shopName'];
 
     await product.save();
@@ -52,9 +52,9 @@ export default class ProductsController {
 
     const newData = request.body();
     product.merge(newData);
-    product.freeDeliver = request.body()['freeDeliver'] === 'on' ? true : false;
+    product.freeDeliver = request.body()['freeDeliver'] === 'on';
 
-    product.save();
+    await product.save();
 
     return response.redirect().toRoute('show', {id: product.id});
   }
