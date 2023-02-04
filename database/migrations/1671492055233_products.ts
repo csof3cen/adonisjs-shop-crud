@@ -9,7 +9,7 @@ export default class extends BaseSchema {
       table.integer('stock').notNullable()
       table.boolean('free_deliver').nullable().defaultTo(true)
       table.double('price').notNullable()
-      table.string('shop_name').nullable().defaultTo('Unamed Shop')
+      table.string('shop_name').nullable().defaultTo('Unnamed Shop')
       table.string('title', 255).notNullable()
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
